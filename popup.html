@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="style.css">  <!--added to link to .css file-->
+</head>
+<body>
+  <h1 id="title">Anne and Dustin's Amazing Chatroom</h1>
+  <div id="chatroom"></div>
+  <div id="commentBox">
+    <div id="textEntry">
+      <form> <!-- added the URL to send the submitted msg-->
+        <textarea rows="2" style="width:700px" type="text" id="messageBox" name="message" placeholder="Enter Message.."></textarea>
+        <input type="button" id="submitButton" value="Submit">
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="./node_modules/expect/umd/expect.min.js"></script>
+<script src="./node_modules/mocha/mocha.js"></script>
+<script src="./test/polyfill.js"></script>
+<script src='./popup.js'></script>
+</html>

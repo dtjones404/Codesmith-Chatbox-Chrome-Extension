@@ -1,0 +1,44 @@
+body {
+  background-color: lavender;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+}
+
+#chatroom {
+  border: 1px black solid;
+  background-color: white;
+  border-radius: 5px;
+  height: 700px;
+  width: 700px;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-wrap: anywhere;
+}
+
+.messageDetails {
+  margin: 1em;
+  padding: 0.5em;
+  border: 2px solid blue;
+  border-radius: 5px;
+  background-color: rgba(135, 206, 250, 0.602);
+}
+
+#textEntry {
+  margin: auto;
+  box-sizing: border-box;
+}
+
+#commentBox {
+  width: 700px;
+  height: 500px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+img {
+  margin: auto;
+}

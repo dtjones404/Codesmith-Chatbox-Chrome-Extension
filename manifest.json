@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+
+  "author": "Dustin Jones, Ali Elhawary",
+  "browser_action": {
+    "default_icon": "pngegg.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
