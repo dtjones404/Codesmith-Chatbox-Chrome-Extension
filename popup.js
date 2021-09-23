@@ -1,6 +1,7 @@
 // prompt user to enter their name
 const room = prompt('Choose a room: ', 'codesmith');
 const username = prompt('What is your name?');
+document.getElementById('title').innerHTML = `Current Room: <em>${room}</em>`;
 const chatroom = document.querySelector('#chatroom');
 const textEntry = document.querySelector('#textEntry');
 const fellows = ['nisa', 'nancy', 'kat', 'kaden', 'jason', 'grisha', 'graham'];
