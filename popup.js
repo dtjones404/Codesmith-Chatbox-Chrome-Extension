@@ -2,6 +2,7 @@
 const username = prompt('What is your name?');
 const chatroom = document.querySelector('#chatroom');
 const textEntry = document.querySelector('#textEntry');
+const fellows = ['nisa', 'nancy', 'kat', 'kaden', 'jason', 'grisha', 'graham'];
 let numberOfMessages = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,6 +76,10 @@ document
   .getElementById('submitButton')
   .addEventListener('click', submitMessage);
 
+document
+  .getElementById('submitButton')
+  .addEventListener('click', makeImageAppear);
+
 function submitMessage() {
   let msgBox = document.getElementById('messageBox');
   let msgFromTxtBox = msgBox.value;
@@ -97,6 +102,14 @@ function submitMessage() {
       scrollDown();
     });
 }
+
+function makeImageAppear() {
+  if (fellows.length) {
+    const portrait = document.getElementById(fellows.pop());
+    portrait.style.visibility = 'visible';
+  }
+}
+
 function getPrettyTimestamp(createdAt) {
   const date = new Date(createdAt);
   const hours = date.getHours();

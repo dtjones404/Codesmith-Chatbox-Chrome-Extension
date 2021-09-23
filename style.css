@@ -11,7 +11,7 @@ body {
   border: 1px black solid;
   background-color: white;
   border-radius: 5px;
-  height: 700px;
+  height: 400px;
   width: 700px;
   margin: auto;
   overflow-x: hidden;
@@ -20,6 +20,7 @@ body {
 }
 
 .messageDetails {
+  font-size: 1.1em;
   margin: 1em;
   padding: 0.5em;
   border: 2px solid blue;
@@ -27,18 +28,52 @@ body {
   background-color: rgba(135, 206, 250, 0.602);
 }
 
-#textEntry {
-  margin: auto;
-  box-sizing: border-box;
-}
-
 #commentBox {
   width: 700px;
-  height: 500px;
+  height: 80px;
   padding: 1em;
   margin: 0 auto;
 }
 
 img {
   margin: auto;
+}
+
+#nancy {
+  margin: auto;
+}
+
+#submitButton {
+  background: url('apple2.png') no-repeat scroll 0 0 transparent;
+  background-color: transparent;
+  color: greenyellow;
+  background-size: cover;
+  border: none;
+  height: 80px;
+  width: 80px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #submitButton:hover {
+    animation: loading-logo-spin infinite 0.3s linear;
+  }
+}
+
+@keyframes loading-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#fellows {
+  display: flex;
+}
+
+#fellows img {
+  height: 80px;
+  width: 80px;
+  visibility: hidden;
 }
