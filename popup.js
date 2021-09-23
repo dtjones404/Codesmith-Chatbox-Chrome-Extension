@@ -1,4 +1,5 @@
 // prompt user to enter their name
+const room = prompt('Choose a room: ', 'codesmith');
 const username = prompt('What is your name?');
 const chatroom = document.querySelector('#chatroom');
 const textEntry = document.querySelector('#textEntry');
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //intiate a fetch request leveraging the URL from the readme.md on line 51
 const getMessages = () => {
-  fetch('https://curriculum-api.codesmith.io/messages')
+  fetch(`http://codesmith-chat-server.herokuapp.com:80/${room}`)
     //leverage the .then method to covert the result into a JSON
     .then((initialMessage) => initialMessage.json())
     .then((initialMessage) => {
@@ -88,11 +89,11 @@ function submitMessage() {
   const messageObj = { message: msgFromTxtBox, created_by: username };
   console.log(messageObj);
   //create post request leveraging fetch
-  fetch(`https://curriculum-api.codesmith.io/messages`, {
+  fetch(`http://codesmith-chat-server.herokuapp.com:80/${room}`, {
     method: 'POST',
     body: JSON.stringify(messageObj),
     headers: {
-      'Content-Type': 'application.json',
+      'Content-Type': 'application/json',
     },
   })
     .then((submittedMsg) => submittedMsg.json())
@@ -116,7 +117,7 @@ function getPrettyTimestamp(createdAt) {
   const minutes = date.getMinutes();
   return `${hours <= 12 ? hours : hours - 12}:${
     minutes >= 10 ? minutes : '0' + minutes
-  } ${hours <= 12 ? 'AM' : 'PM'}`;
+  } ${hours < 12 ? 'AM' : 'PM'}`;
 }
 
 function scrollDown() {

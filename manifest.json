@@ -9,5 +9,5 @@
   "browser_action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "*://*.codesmith.io/*"]
+  "permissions": ["activeTab", "*://*.herokuapp.com/*"]
 }

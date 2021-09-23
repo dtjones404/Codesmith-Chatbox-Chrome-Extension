@@ -37,6 +37,8 @@ body {
 
 img {
   margin: auto;
+  display: block;
+  max-width: 100%;
 }
 
 #nancy {
@@ -53,7 +55,7 @@ img {
   width: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   #submitButton:hover {
     animation: loading-logo-spin infinite 0.3s linear;
   }
@@ -66,7 +68,7 @@ img {
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 #fellows {
   display: flex;
